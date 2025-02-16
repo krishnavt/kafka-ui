@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  kafka-ui:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=your-secret-key-here
+    volumes:
+      - .:/app
+      - /app/node_modules
